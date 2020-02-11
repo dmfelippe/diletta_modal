@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 const Color OVERLAY_COLOR = const Color(0x60000000);
 const bool OVERLAY_DISMISSIBLE = true;
-const Color MODAL_COLOR = const Color(0xffffffff);
+const Color MODAL_COLOR = const Color(0xffefefef);
 const EdgeInsetsGeometry MODAL_MARGIN = const EdgeInsets.fromLTRB(24, 200, 24, 0);
 const double MODAL_BORDER_RADIUS = 16;
 const EdgeInsetsGeometry MODAL_CONTENT_PADDING_VERTICAL = const EdgeInsets.fromLTRB(0, 28, 0, 16);
