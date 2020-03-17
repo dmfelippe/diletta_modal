@@ -130,7 +130,7 @@ class DilettaAlertModal extends DilettaBasicModal {
                   child: Container(
                     padding: buttonPadding,
                     width: MediaQuery.of(context).size.width,
-                    color: modalColor,
+                    color: Colors.transparent,
                     child: Text(
                       buttonText,
                       style: getButtonStyle(),

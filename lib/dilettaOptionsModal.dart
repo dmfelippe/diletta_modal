@@ -136,7 +136,7 @@ class DilettaOptionsModal extends DilettaBasicModal {
                         child: Container(
                           padding: buttonPadding,
                           width: MediaQuery.of(context).size.width,
-                          color: modalColor,
+                          color: Colors.transparent,
                           child: Text(
                             cancelButtonText,
                             style: getButtonStyle(),
@@ -159,7 +159,7 @@ class DilettaOptionsModal extends DilettaBasicModal {
                         child: Container(
                           padding: buttonPadding,
                           width: MediaQuery.of(context).size.width,
-                          color: modalColor,
+                          color: Colors.transparent,
                           child: Text(
                             confirmButtonText,
                             style: getButtonStyle(),

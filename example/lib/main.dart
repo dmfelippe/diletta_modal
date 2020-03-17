@@ -77,11 +77,12 @@ class _MyHomePageState extends State<MyHomePage> {
             RaisedButton(
               onPressed: () {
                 DilettaOptionsModal modal = DilettaOptionsModal(
-                  modalColor: Color(0xffefefef),
+                  modalColor: Color(0xffefefef).withOpacity(0.5),
                   title: 'ATENÇÃO!', 
                   body: 'Teste de um body cheio de coisa escrita pra gente ficar bem feliz, mas dessa vez com uma escolha pra fazer',
                   cancelButtonText: 'VOLTAR',
                   confirmButtonText: 'INICIAR VIAGEM',
+                  borderRadius: 14,
                 );
                 DilettaModal.openDilettaModal(context, modal).then((result) {
                   if (result == null){
