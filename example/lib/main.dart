@@ -46,7 +46,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   @override
@@ -62,44 +61,42 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            RaisedButton(
+            ElevatedButton(
               onPressed: () {
                 DilettaAlertModal modal = DilettaAlertModal(
                   modalColor: Color(0xffefefef),
-                  title: 'ATENÇÃO!', 
-                  body: 'Teste de um body cheio de coisa escrita pra gente ficar bem feliz...',
+                  title: 'ATENÇÃO!',
+                  body:
+                      'Teste de um body cheio de coisa escrita pra gente ficar bem feliz...',
                   buttonText: 'OK',
                 );
                 DilettaModal.openDilettaModal(context, modal);
               },
               child: Text('Abrir Modal'),
             ),
-            RaisedButton(
+            ElevatedButton(
               onPressed: () {
                 DilettaOptionsModal modal = DilettaOptionsModal(
                   modalColor: Color(0xffefefef).withOpacity(0.5),
-                  title: 'ATENÇÃO!', 
-                  body: 'Teste de um body cheio de coisa escrita pra gente ficar bem feliz, mas dessa vez com uma escolha pra fazer',
+                  title: 'ATENÇÃO!',
+                  body:
+                      'Teste de um body cheio de coisa escrita pra gente ficar bem feliz, mas dessa vez com uma escolha pra fazer',
                   cancelButtonText: 'VOLTAR',
                   confirmButtonText: 'INICIAR VIAGEM',
+                  buttonFontColor: Colors.pink,
                   borderRadius: 14,
                 );
                 DilettaModal.openDilettaModal(context, modal).then((result) {
-                  if (result == null){
+                  if (result == null) {
                   } else if (result == false) {
-                    _scaffoldKey.currentState.showSnackBar(
-                      SnackBar(
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                         content: Text('Ops, você clicou na opção de cancelar'),
-                        duration: Duration(seconds: 2)
-                      )
-                    );
+                        duration: Duration(seconds: 2)));
                   } else {
-                    _scaffoldKey.currentState.showSnackBar(
-                      SnackBar(
-                        content: Text('Uhuuuuu, você clicou na opção de confirmar'),
-                        duration: Duration(seconds: 2)
-                      )
-                    );
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        content:
+                            Text('Uhuuuuu, você clicou na opção de confirmar'),
+                        duration: Duration(seconds: 2)));
                   }
                 });
               },
@@ -107,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
             )
           ],
         ),
-      ), 
+      ),
     );
   }
 }
